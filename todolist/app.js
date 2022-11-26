@@ -15,7 +15,7 @@ add.addEventListener("click", e => {
         return; 
     }
 
-    // create a todo  創造item
+    // create a todo 創造item
     let todo = document.createElement("div");
     todo.classList.add("todo");
     let text = document.createElement("p");
@@ -24,7 +24,7 @@ add.addEventListener("click", e => {
     let time = document.createElement("p");
     time.classList.add("todo-time");
     time.innerText = todoMonth + " / " + todoDate;
-    // 把text.time append到todo裡
+    
     todo.appendChild(text);
     todo.appendChild(time);
 
@@ -74,7 +74,7 @@ add.addEventListener("click", e => {
     };
 
     // 讓待辦事項不會因網頁關閉再開啟而消失
-    let myList = localStorage.getItem("list"); // 如果在localStorage本來就有list array的話就先parse換成array再加入上方myTodo object然後setItem
+    let myList = localStorage.getItem("list");
     if (myList == null) {
         localStorage.setItem("list", JSON.stringify([myTodo]));
     } else {
