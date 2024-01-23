@@ -124,7 +124,7 @@ if (myList !== null) {
                         localStorage.setItem("list", JSON.stringify(myListArray));
                     }
                 })
-                todoItem.remove();ge
+                todoItem.remove();
             })
             todoItem.style.animation = "scaleDown 0.4s forwards";
         })
